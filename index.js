@@ -1,15 +1,28 @@
-import { listarProdutos } from "./consulta.js";
 
 import express from 'express'
 
 const app = express()
 
 app.get('/', (req, res) =>{
-    
     res.json('Ola Mundo ...')
 })
 
-app.get('/produtos', async (req, res) =>{
+app.get('/cliente', async (req, res) =>{
+    let produtos = await listarProdutos()
+    res.json(produtos)
+})
+
+app.post('/cliente', async (req, res) =>{
+    let produtos = await listarProdutos()
+    res.json(produtos)
+})
+
+app.put('/cliente', async (req, res) =>{
+    let produtos = await listarProdutos()
+    res.json(produtos)
+})
+
+app.delete('/cliente', async (req, res) =>{
     let produtos = await listarProdutos()
     res.json(produtos)
 })
