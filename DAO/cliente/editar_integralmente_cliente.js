@@ -1,5 +1,4 @@
-const {conexao} = require('../conexao.js')
-
+import conexao from '../conexao.js'
 async function editarIntegralmenteCliente(infos, codigo){
 
     const sql = `UPDATE tbl_cliente SET telefone = ?, nome = ?, limite = ?, id_endereco = ?, id_status = ? WHERE codigo = ${codigo} ;`
