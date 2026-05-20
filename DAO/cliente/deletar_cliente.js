@@ -1,5 +1,4 @@
-const {conexao} = require('../conexao.js')
-
+import conexao from '../conexao.js'
 async function deletarCliente(codigo){
     
     const sql = `DELETE FROM tbl_cliente WHERE codigo = ?`
