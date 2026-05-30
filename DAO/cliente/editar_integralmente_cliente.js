@@ -15,4 +15,4 @@ async function editarIntegralmenteCliente(infos, codigo){
       }
 }
 
-module.exports = {editarIntegralmenteCliente}
+export {editarIntegralmenteCliente}
