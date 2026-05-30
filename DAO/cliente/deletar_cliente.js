@@ -15,4 +15,4 @@ async function deletarCliente(codigo){
       }
 }
 
-module.exports = {deletarCliente}
+export {deletarCliente}
