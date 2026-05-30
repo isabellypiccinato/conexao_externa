@@ -22,4 +22,4 @@ async function editarParcialmenteCliente(codigo, campo, valor){
       }
 }
 
-module.exports = {editarParcialmenteCliente}
+export {editarParcialmenteCliente}
