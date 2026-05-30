@@ -31,4 +31,4 @@ async function buscarCliente(codigo){
       }
 }
 
-exports {buscarClientes, buscarCliente}
+export {buscarClientes, buscarCliente}
