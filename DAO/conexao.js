@@ -34,4 +34,4 @@ async function testarConexao() {
   }
 }
 
-module.exports = { conexao, closeConexao, testarConexao }
+export = { conexao, closeConexao, testarConexao }
