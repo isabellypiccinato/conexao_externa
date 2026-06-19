@@ -1,6 +1,6 @@
 import express from 'express'
 // Importando as funções lógicas do banco de dados (vamos criá-las no passo abaixo)
-import { listarClientes, buscarClientePorId, inserirCliente, atualizarCliente, deletarCliente } from './DAO/clienteDAO.js'
+import { buscarCliente1, buscarClientes1, buscarClientePorId, inserirCliente, atualizarCliente, deletarCliente } from './DAO/clienteDAO.js'
 
 const app = express()
 
@@ -15,10 +15,20 @@ app.get('/', (req, res) => {
 // 1. CONSULTAR TODOS (GET)
 app.get('/cliente', async (req, res) => {
     try {
-        const clientes = await listarClientes()
+        const clientes = await buscarClientes1()
         res.json(clientes)
     } catch (erro) {
         res.status(500).json({ erro: 'Erro ao listar clientes', detalhes: erro.message })
+    }
+})
+
+// 1. CONSULTAR TODOS (GET)
+app.get('/status', async (req, res) => {
+    try {
+        const status= await listarClientes()
+        res.json(status)
+    } catch (erro) {
+        res.status(500).json({ erro: 'Erro ao listar status', detalhes: erro.message })
     }
 })
 

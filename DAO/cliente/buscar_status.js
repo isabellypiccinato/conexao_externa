@@ -1,9 +1,9 @@
 import {conexao} from '../conexao.js'
 
 
-async function buscarClientes2(){
+async function buscarClientes(){
   console.log('DAO de CLIENTE')
-    const sql = `SELECT * FROM tbl_cliente;`
+    const sql = `SELECT * FROM Cliente;`
     
     const conn = await conexao()
     try {
@@ -16,8 +16,8 @@ async function buscarClientes2(){
       }
 }
 
-async function buscarCliente2(codigo){
-    const sql = `SELECT * FROM tbl_cliente WHERE codigo = ?`
+async function buscarCliente(codigo){
+    const sql = `SELECT * FROM Cliente WHERE codigo = ?`
     
     const conn = await conexao()
     
@@ -31,4 +31,4 @@ async function buscarCliente2(codigo){
       }
 }
 
-export {buscarClientes2, buscarCliente2}
+export {buscarClientes, buscarCliente}
